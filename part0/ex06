@@ -1,0 +1,29 @@
+0.6: New note in Single page app diagram
+
+Create a diagram depicting the situation where the user creates a new note using the single-page version of the app.
+
+This was the last exercise, and it's time to push your answers to GitHub and mark the exercises as done in the submission system.
+Answer:
+
+
+I'm assuming the requests are sucessful (the browser returns the resource and status 200 or 201)
+
+
+
+Browser -> Server :: GET SPA_notes
+
+Browser -> Server :: GET CSS
+
+Browser -> Server :: GET spa.js
+
+Browser -> Server :: GET data.json
+
+Browser -> Server :: GET Favicon
+
+-----
+
+Browser -> Browser :: Submit Event
+
+Browser -> Browser :: Update Notelist & reload page
+
+Browser -> Server  :: POS new_note_spa
