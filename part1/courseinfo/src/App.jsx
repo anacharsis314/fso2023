@@ -16,7 +16,6 @@ const Part = (part) => {
 }
 
 const Content = (parts) => {
-    //console.log(parts.parts[1])
     return(
 	<div>
 	    <Part
@@ -32,7 +31,8 @@ const Total = (parts) => {
     return(
 	<div>
 	    <p>
-		Number of Exercises {parts.parts.reduce(((acc, x) => acc + x.exercises), 0)}
+		Number of Exercises {parts.parts.reduce(((acc, x) =>
+		    acc + x.exercises), 0)}
 	    </p>
 	</div>)}
 
@@ -54,7 +54,6 @@ const App = () => {
       }
     ]
   }
-    //console.log(parts[0])
   return (
     <div>
       <Header course={course.name} />
