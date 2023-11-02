@@ -18,10 +18,10 @@ const Header = () => {
 
 const StatisticLine = ({text, value}) => {
     return(
-        <div>
+  <tr>
             <td> {text}  </td>
             <td> {value} </td>
-        </div>
+  </tr>
     )
 }
 const Statistics = ({ goods, bads, neutrals }) => {
@@ -30,12 +30,16 @@ const Statistics = ({ goods, bads, neutrals }) => {
         <>
             <h1>statistics</h1>
             <div>
-                <StatisticLine text="good" value={goods}/>
-                <StatisticLine text="neutral" value={neutrals}/>
-                <StatisticLine text="bad" value={bads}/>
-                <StatisticLine text="all" value={goods + bads + neutrals}/>
-                <StatisticLine text="average" value={(goods - bads) / (goods + bads + neutrals)} />
-                <StatisticLine text="positive" value={(goods/(goods + neutrals + bads)).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2})}/>
+                <table>
+                    <tbody>
+                        <StatisticLine text="good" value={goods}/>
+                        <StatisticLine text="neutral" value={neutrals}/>
+                        <StatisticLine text="bad" value={bads}/>
+                        <StatisticLine text="all" value={goods + bads + neutrals}/>
+                        <StatisticLine text="average" value={(goods - bads) / (goods + bads + neutrals)} />
+                        <StatisticLine text="positive" value={(goods/(goods + neutrals + bads)).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2})}/>
+                    </tbody>
+                 </table>
             </div></>
     )}
     else {
