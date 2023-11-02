@@ -13,7 +13,7 @@ const Header = () => {
     return(
         <h1>give feedback</h1>
     )
-    
+
 }
 
 const StatisticLine = ({text, value}) => {
